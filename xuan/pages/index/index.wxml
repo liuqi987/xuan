@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view>
+<!-- 搜索 -->
+<view class="dou">
+  <text>豆瓣</text>  <input placeholder-class="sou" type="text" placeholder="搜索"></input>
+</view>
+	<!-- 热门 -->
+	<view class="title">豆瓣热门</view>
+	<view class="hot">
+		<view wx:for="{{hot}}" wx:key="{{index}}" catchtap="detail" data-ind="{{item.id}}">
+			<image src="{{item.images.small}}"></image>
+			<text>{{item.title}}</text>
+      <text>评分：{{item.rating.average}}</text>
+		</view>
+	</view>
+  <!-- top250 -->
+  <text class="title">Top250</text>
+  	<view class="hot">
+		<view wx:for="{{top}}" wx:key="{{index}}"  catchtap="detail" data-ind="{{item.id}}">
+			<image src="{{item.images.small}}"></image>
+			<text>{{item.title}}</text>
+      <text>评分：{{item.rating.average}}</text>
+		</view>
+	</view>
+  <!-- 上映 -->
+  <text class="title">即将上映</text>
+  	<view class="hot">
+		<view wx:for="{{quick}}" wx:key="{{index}}"  catchtap="detail" data-ind="{{item.id}}">
+			<image src="{{item.images.small}}"></image>
+			<text>{{item.title}}</text>
+      <text>评分：{{item.rating.average}}</text>
+		</view>
+	</view>
+</view>

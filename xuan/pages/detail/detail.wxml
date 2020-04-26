@@ -1,0 +1,21 @@
+<!--pages/detail/detail.wxml-->
+
+	<view class="top">
+		<image class="img" src="{{detail.images.small}}"></image>
+		<view>
+			<text class="title" style="font-size:40rpx;">电影名：{{detail.title}}</text>
+			<text>上映时间：{{detail.pubdate}}</text>
+			<text>{{detail.durations}}</text><text>时间：{{detail.pubdates}}</text><text>时长:{{detail.durations}}</text>
+		</view>
+	</view>
+	<view class="star">
+		<text style="display:block;font-size:24rpx;">查看评分</text>
+		<text>{{detail.rating.average}}</text>
+	</view>
+	<view class="ju">
+		<text style="display:block;font-size:30rpx;color:#ccc;margin-top:30rpx;margin-left:20rpx">剧情简介：</text>
+		<scroll-view scroll-y="true" style="height:200rpx;">
+			<text style="font-size:26rpx;">{{detail.summary}}</text>
+		</scroll-view>
+
+	</view>
